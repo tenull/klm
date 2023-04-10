@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.contactus-container input{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: white;
+  /* border-bottom: 1px solid white; */
+}
+
+.contactus-container input::placeholder{
+  color: white;
+  padding-left: 25px;
+}
+
+.contactus-container input:focus{
+  background:transparent;
+  color: white;
+  border: none;
+    border-width: 0 0 2px;
+    border-color:white
+  }
+
+.checkbox input{
+  background:transparent;
+  border-color: white;
+}
+.checkbox input:focus{
+  background:transparent;
+  border-color: white;
+}
+
+.footer{
+  background-color: #019AC4;
+}
+
+
+.large {
+  gap: 2rem;
+  display: flex;
+}
+.small {
+  display: none;
+}
+img {
+  
+  width: 95%;
+  height: 600px;
+
+}
+.container:nth-of-type(2n) .large {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .large {
+    display: none;
+  }
+  .small {
+    display: flex;
+    flex-direction: column;
+  }
+}
