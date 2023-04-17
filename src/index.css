@@ -72,3 +72,73 @@ img {
     flex-direction: column;
   }
 }
+
+
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /* elrejtjük az alapértelmezett select-et */
+}
+
+.custom-select select option {
+  background-color: #fff;
+  color: #000;
+}
+
+.custom-select .select-selected {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  height: 40px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.custom-select .select-selected:focus {
+  outline: none;
+}
+
+.custom-select .select-selected:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-select .select-selected.select-arrow-active:after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.custom-select .select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.custom-select .select-items div {
+  padding: 8px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-select .select-items div:hover {
+  background-color: #f2f2f2;
+}
